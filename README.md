@@ -26,4 +26,9 @@ heroku config:set DATABASE_NAME=fqmuewmhzucwoe
 
 postgres://fqmuewmhzucwoe:02ae302647d962b58631bf6436fe32dfed1733348b6862f6ec19f59663ce4f20@ec2-3-218-71-191.compute-1.amazonaws.com:5432/damsultrc0eikp
 
-psql PGPASSWORD=strapi123 pg_dump -Fc --no-acl --no-owner -h localhost -U strapi strapi > strapi.dump
+git push heroku HEAD:main
+heroku pg:backups:restore 'https://res.cloudinary.com/dzgzmimb1/raw/upload/v1623036230/strapi_i1t3fi.sql' DATABASE_URL
+
+
+heroku config:set NODE_ENV=production
+
