@@ -31,4 +31,4 @@ heroku pg:backups:restore 'https://res.cloudinary.com/dzgzmimb1/raw/upload/v1623
 
 
 heroku config:set NODE_ENV=production
-
+heroku config:set MY_HEROKU_URL=https://reactavancado-api-perosa.herokuapp.com/
